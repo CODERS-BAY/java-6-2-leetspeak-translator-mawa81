@@ -8,8 +8,9 @@ public class Main {
         Scanner scan_console = new Scanner(System.in);
         String input = scan_console.nextLine();
         //System.out.println(input);
-        char[] input_char = input.toCharArray();
+        char[] input_char = input.toUpperCase().toCharArray();
         String leetspeak = "";
+        //System.out.println(input_char);
         for (char i : input_char) {
             switch (i) {
                 case ' ':
@@ -93,6 +94,8 @@ public class Main {
                 case 'Z':
                     leetspeak += '2';
                     break;
+                default:
+                    leetspeak += i;
             }
         }
         System.out.println(leetspeak);
