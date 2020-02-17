@@ -5,14 +5,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scan_console = new Scanner(System.in);
-        String input = scan_console.nextLine();
+        Scanner scanConsole = new Scanner(System.in);
+        String input = scanConsole.nextLine();
         //System.out.println(input);
         char[] input_char = input.toUpperCase().toCharArray();
         String leetspeak = "";
         //System.out.println(input_char);
-        for (char i : input_char) {
-            switch (i) {
+        for (char currentCharacter : input_char) {
+            switch (currentCharacter) {
                 case ' ':
                     leetspeak += ' ';
                     break;
@@ -95,7 +95,7 @@ public class Main {
                     leetspeak += '2';
                     break;
                 default:
-                    leetspeak += i;
+                    leetspeak += currentCharacter;
             }
         }
         System.out.println(leetspeak);
